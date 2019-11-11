@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+$dark-gray: #3b3b3d;
+$brand-gray: $dark-gray;
+$brand-primary: #1D2939;
+$brand-accent: #adb5bd;
+
+$white: #ffffff;
+$danger: #dc3545;
+$success: #28a745;
+$black: #111;
+$blue: #0020dd;
+$dark: #000000;
+$body-color: $black;
+$disabled: #eeeeee;
+$border-color: #f3f3f3;
+$bg-light-gray: #efefef;
+$disabled-link: rgba(100, 99, 99, 0.45);
+
+//Break points
+$screen-xs: 360px;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-md-max: 1024px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-lg-max: 1199px;
+
+$header-font: 36px;
+$body-font: 14px;
+$border-radius: 4px;
+
+$custom-navbar-height: 60px;
+$custom-navbar-padding: 10px 32px;
+$sub-menu-font: 12px;
+$sidebar-width: 144px;
+$content-padding: 32px;
+$viewport-height: 100vh;
+
+
+
