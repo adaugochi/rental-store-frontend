@@ -11,83 +11,37 @@
             </li>
             <li class="">
                 <a href="" data-toggle="collapse" data-target="#subMenu1">
-                    <i class="md-48 icon material-icons">work</i>
+                    <i class="md-48 icon material-icons">payment</i>
                     <span class="nav-label">
-                        Jobs<i class="pl-2 fa fa-caret-down"></i>
+                        Transactions<i class="pl-2 fa fa-caret-down"></i>
                     </span>
                 </a>
                 <div id="subMenu1" class="sub-menu collapse">
                     <span class="sub-menu__items">
                         <a href="#">
-                            <span class="">Pending</span>
+                            <span class="">Transfer</span>
                         </a>
                     </span>
                     <span class="sub-menu__items">
                         <a href="">
-                            <span class="">Active</span>
+                            <span class="">Loan</span>
                         </a>
                     </span>
                     <span class="sub-menu__items">
                         <a href="#">
-                            <span class="">Bids</span>
+                            <span class="">Pay Bills</span>
                         </a>
                     </span>
                 </div>
             </li>
-            <li class="">
-                <a href="" data-toggle="collapse" data-target="#subMenu2">
-                    <i class="md-48 icon material-icons">people</i>
-                    <span class="nav-label">
-                        Users<i class="pl-2 fa fa-caret-down"></i>
-                    </span>
-                </a>
-                <div id="subMenu2" class="sub-menu collapse">
-                    <span class="sub-menu__items">
-                        <a href="#">
-                            <span class="">Freelancers</span>
-                        </a>
-                    </span>
-                    <span class="sub-menu__items">
-                        <a href="#">
-                            <span class="">Clients</span>
-                        </a>
-                    </span>
-                    <span class="sub-menu__items">
-                        <a href="#">
-                            <span class="">Administrator</span>
-                        </a>
-                    </span>
-                </div>
-            </li>
+
             <li class="">
                 <a href="" data-toggle="collapse" data-target="#subMenu3">
                     <i class="md-48 icon material-icons">settings</i>
                     <span class="nav-label">
-                        Admin<i class="pl-2 fa fa-caret-down"></i>
+                        Settings
                     </span>
                 </a>
-                <div id="subMenu3" class="sub-menu collapse">
-                    <span class="sub-menu__items">
-                        <a href="#">
-                            <span class="">Freelance requests</span>
-                        </a>
-                    </span>
-                    <span class="sub-menu__items">
-                        <a href="#">
-                            <span class="">Consultations</span>
-                        </a>
-                    </span>
-                    <span class="sub-menu__items">
-                        <a href="">
-                            <span class="">Invites</span>
-                        </a>
-                    </span>
-                    <span class="sub-menu__items">
-                        <a href="#">
-                            <span class="">Users</span>
-                        </a>
-                    </span>
-                </div>
             </li>
         </ul>
     </section>
