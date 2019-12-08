@@ -52,5 +52,6 @@
 <script src="js/jquery/jquery.min.js"></script>
 <script src="js/bootstrap/bootstrap.min.js"></script>
 <script src="node_modules/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="js/jquery/jquery.name.badges.js"></script>
 <script src="js/layout.js"></script>
 </html>

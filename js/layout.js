@@ -8,6 +8,7 @@
     let slimscrollSize = "4px";
     let imageLabel = $(".image-label");
     let imagePreview = $(".image-preview");
+    let imageName = $(".image-name");
 
     //Toggle Sidebar
     sidebarToggle.on('click', function () {
@@ -32,5 +33,10 @@
         imageLabel.css("height", imageLabelWidth);
         imagePreview.css("height",  imageLabelWidth);
     }).resize();
+
+    imageName.nameBadge({
+        border: {},
+        size: 40
+    });
 
 })(jQuery);

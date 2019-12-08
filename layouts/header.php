@@ -8,6 +8,7 @@
     <div class="justify-content-end">
         <div class="dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+                <span class="image-name">Emmie Farrell</span>
                 <span class="nav-text mr-3">Emmie Farrell</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
