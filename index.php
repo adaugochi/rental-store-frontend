@@ -89,5 +89,5 @@
 <script src="/node_modules/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <script src="/js/jquery/jquery.name.badges.js"></script>
 <script src="/js/layout.js"></script>
-<script src="/js/pages/users.js"></script>
+<script src="/js/pages.js"></script>
 </html>
