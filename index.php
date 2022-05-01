@@ -84,6 +84,7 @@
 </body>
 
 <script src="/js/jquery/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 <script src="/js/bootstrap/bootstrap.min.js"></script>
 <script src="/node_modules/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <script src="/js/jquery/jquery.name.badges.js"></script>

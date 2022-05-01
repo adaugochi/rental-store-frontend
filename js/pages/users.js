@@ -2,6 +2,39 @@
     const baseURL = 'http://localhost:8000/api/';
     const pathname = window.location.pathname;
 
+    if (pathname === '/') {
+        $.ajax({
+            url: `${baseURL}rent/logs`,
+            type: "GET",
+            cache: true,
+            success: function (response) {
+                let result = response.result;
+                let xValues = Object.keys(result);
+                let yValues = Object.values(result);
+                yValues.push(0)
+                let barColors = ["green","purple","orange","brown"];
+
+                new Chart("myChart", {
+                    type: "bar",
+                    data: {
+                        labels: xValues,
+                        datasets: [{
+                            backgroundColor: barColors,
+                            data: yValues
+                        }]
+                    },
+                    options: {
+                        legend: {display: false},
+                        title: {
+                            display: true,
+                            text: "A Chart showing the statistics of the logs."
+                        }
+                    }
+                });
+            }
+        });
+    }
+
     if (pathname === '/users') {
         let queryStr = window.location.search;
         $.ajax({

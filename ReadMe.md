@@ -31,6 +31,11 @@ git clone git@github.com:adaugochi/rental-store-api.git
 npm install
 ```
 
+## Compiling SCSS to CSS
+```bash
+gulp build
+```
+
 ## Starting the Application
 You can run the application in development mode by running this command from the project directory:
 
