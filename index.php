@@ -6,28 +6,34 @@
     <title>Admin Portal</title>
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/materialize-icon/materialize-icons.css">
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/materialize-icon/materialize-icons.css">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
 </head>
 <body>
     <?php
-        $request = $_SERVER['REQUEST_URI'];
+        $request = strtok($_SERVER["REQUEST_URI"], '?');
+        $breadCrumb = '';
         $title = '';
+        //var_dump($request); exit();
 
-        switch ($request) {
-            case '/' :
-                $title = 'Dashboard';
-                break;
-            case '/users' :
-                $title = 'Users';
-                break;
-            case '/rents' :
-                $title = 'Rents';
-                break;
-            default:
-                http_response_code(404);
-                break;
+        $uri_segments = explode('/', $request);
+
+        if ($request === '/') {
+            $title = 'Dashboard';
+            $breadCrumb = '<li class="active">' . $title . '</li>';
+        } elseif ($request === '/users') {
+            $title = 'Users';
+            $breadCrumb = '<li class="active">' . $title . '</li>';
+        } elseif ($request === '/rents') {
+            $title = 'Rents';
+            $breadCrumb = '<li class="active">' . $title . '</li>';
+        } elseif ($uri_segments[count($uri_segments) - 1] == 'rents') {
+            $title = 'My Rents';
+            $breadCrumb = '<li><a href="/users">Users</a></li><li class="active">Rents</li>';
+        } else {
+            $breadCrumb = '<li class="active">404</li>';;
+            echo "<h1>Not Found</h1>";
         }
     ?>
     <div class="wrapper">
@@ -42,7 +48,7 @@
                                 <h1 class="content-header__title"><?= $title ?></h1>
                                 <ol class="breadcrumb">
                                     <li><a href="/">Home</a></li>
-                                    <li class="active"><?= $title ?></li>
+                                    <?= $breadCrumb ?>
                                 </ol>
                             </div>
                             <div class="col-md-5">
@@ -55,21 +61,19 @@
                 </section>
                 <section class="content-body">
                     <?php
-                        $request = $_SERVER['REQUEST_URI'];
+                        $request = strtok($_SERVER["REQUEST_URI"], '?');
+                        $uri_segments = explode('/', $request);
 
-                        switch ($request) {
-                            case '/' :
-                                include('pages/dashboard.php');
-                                break;
-                            case '/users' :
-                                include('pages/users.php');
-                                break;
-                            case '/rents' :
-                                include('pages/rents.php');
-                                break;
-                            default:
-                                http_response_code(404);
-                                break;
+                        if ($request === '/') {
+                            include('pages/dashboard.php');
+                        } elseif ($request === '/users') {
+                            include('pages/users.php');
+                        } elseif ($request === '/rents') {
+                            include('pages/rents.php');
+                        } elseif ($uri_segments[count($uri_segments) - 1] == 'rents') {
+                            include('pages/user-rents.php');
+                        } else {
+                            echo "<h1>Not Found</h1>";
                         }
                     ?>
                 </section>
@@ -79,9 +83,10 @@
     </div>
 </body>
 
-<script src="js/jquery/jquery.min.js"></script>
-<script src="js/bootstrap/bootstrap.min.js"></script>
-<script src="node_modules/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<script src="js/jquery/jquery.name.badges.js"></script>
-<script src="js/layout.js"></script>
+<script src="/js/jquery/jquery.min.js"></script>
+<script src="/js/bootstrap/bootstrap.min.js"></script>
+<script src="/node_modules/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/js/jquery/jquery.name.badges.js"></script>
+<script src="/js/layout.js"></script>
+<script src="/js/pages/users.js"></script>
 </html>
