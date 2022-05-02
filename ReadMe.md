@@ -17,12 +17,12 @@ You have to clone this repo using either `HTTPS` or `SSH`
 
 - HTTPS
 ```bash
-git clone https://github.com/adaugochi/rental-store-api.git
+git clone https://github.com/adaugochi/rental-store-frontend.git
 ```
 
 - SSH
 ```bash
-git clone git@github.com:adaugochi/rental-store-api.git
+git clone git@github.com:adaugochi/rental-store-frontend.git
 ```
 
 ## Install Dependencies
